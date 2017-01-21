@@ -4,7 +4,7 @@
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+					<a href="//ab-it.io" title="AB-IT">AB-IT</a> &amp; <a href="//buildyourcustom.site" title="buildyourcustom.site">buildyourcustom.site</a>.
 				</p>
 				<!-- /copyright -->
 
