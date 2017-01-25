@@ -11,6 +11,7 @@
 	License URI: http://opensource.org/licenses/mit-license.php
 */
 
+
 /*------------------------------------*\
     MAIN
 \*------------------------------------*/
@@ -32,6 +33,8 @@ html {
 body {
 	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color:#444;
+	padding-top: 3rem;
+
 }
 /* clear */
 .clear:before,
@@ -80,6 +83,7 @@ input:focus {
 	margin:0 auto;
 	position:relative;
 }
+
 /* header */
 .header {
 
@@ -93,7 +97,7 @@ input:focus {
 }
 /* nav */
 .nav {
-
+position: fixed !important;
 }
 
 /* sidebar */

@@ -1,42 +1,42 @@
 <?php get_header('WPMW'); ?>
 
-	<main role="main">
-		<!-- section -->
-		<section>
+<main role="main">
+    <!-- section -->
+    <section>
 
-			<h1><?php the_title(); ?></h1>
+        <?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-		<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-			<!-- article -->
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-				<?php the_content(); ?>
-
-
-				<br class="clear">
+            <!-- article -->
+            <article class="jumbotron" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+                <div class="container">
+                    <h1><?php the_title(); ?></h1>
+                    <?php the_content(); ?>
+                </div>
 
 
-			</article>
-			<!-- /article -->
+                <br class="clear">
 
-		<?php endwhile; ?>
 
-		<?php else: ?>
+            </article>
+            <!-- /article -->
 
-			<!-- article -->
-			<article>
+        <?php endwhile; ?>
 
-				<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
+        <?php else: ?>
 
-			</article>
-			<!-- /article -->
+            <!-- article -->
+            <article>
 
-		<?php endif; ?>
+                <h2><?php _e('Sorry, nothing to display.', 'html5blank'); ?></h2>
 
-		</section>
-		<!-- /section -->
-	</main>
+            </article>
+            <!-- /article -->
+
+        <?php endif; ?>
+
+    </section>
+    <!-- /section -->
+</main>
 
 <?php get_sidebar(); ?>
 
