@@ -107,6 +107,11 @@ function html5blank_conditional_scripts()
         wp_register_script('scriptname', get_template_directory_uri() . '/js/scriptname.js', array('jquery'), '1.0.0'); // Conditional script(s)
         wp_enqueue_script('scriptname'); // Enqueue it!
     }
+        if ( is_page_template('WPWM-contact-template.php') ) {
+            wp_register_script('email', get_template_directory_uri() . '/js/email.js', array('jquery'), '1.0.0'); // Conditional script(s)
+            wp_enqueue_script('email'); // Enqueue it!
+        }
+
 }
 
 // Load HTML5 Blank styles
@@ -338,6 +343,8 @@ function html5blankcomments($comment, $args, $depth)
 <?php endif; ?>
 <?php }
 
+
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/
@@ -351,6 +358,7 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_html5'); // Add our HTML5 Blank Custom Post Type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
+
 
 // Remove Actions
 remove_action('wp_head', 'feed_links_extra', 3); // Display the links to the extra feeds such as category feeds
@@ -457,7 +465,7 @@ function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 short
 	Log to wp_debug if you use write_log
 \*------------------------------------*/
 if (!function_exists('write_log')) {
-    function write_log($log)
+function write_log($log)
     {
         if (true === WP_DEBUG) {
             if (is_array($log) || is_object($log)) {
