@@ -69,14 +69,14 @@ function html5blank_nav()
         array(
             'menu' => '',
             'theme_location' => 'header-menu',
-            'container'       => 'div',
-            'container_id'    => 'bs4navbar',
+            'container' => 'div',
+            'container_id' => 'bs4navbar',
             'container_class' => 'collapse navbar-collapse',
-            'menu_id'         => false,
-            'menu_class'      => 'navbar-nav mr-auto',
-            'depth'           => 2,
-            'fallback_cb'     => 'bs4navwalker::fallback',
-            'walker'          => new bs4navwalker())
+            'menu_id' => false,
+            'menu_class' => 'navbar-nav mr-auto',
+            'depth' => 2,
+            'fallback_cb' => 'bs4navwalker::fallback',
+            'walker' => new bs4navwalker())
     );
 }
 
@@ -468,5 +468,6 @@ if (!function_exists('write_log')) {
         }
     }
 }
+
 
 ?>
